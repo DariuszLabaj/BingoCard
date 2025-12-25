@@ -156,10 +156,6 @@ class BingoCard {
     touchStarted(pos_x, pos_y) {
         if (this._scene != BingoCard.UserScene.READY) return;
         userStartAudio();
-        if (sfx.toggle) {
-            sfx.toggle.stop();
-            sfx.toggle.play();
-        }
         if (pointInRect(pos_x, pos_y, this._ui.toggleTheme.bounds)) toggleTheme();
         if (pointInRect(pos_x, pos_y, this._ui.toggleFullscreen.bounds)) toggleFullscreen();
         if (pointInRect(pos_x, pos_y, this._ui.newCard.bounds)) {
@@ -193,7 +189,7 @@ class BingoCard {
                 y0 - cell * 0.6
             );
         }
-        
+
         textSize(cell * 0.35);
         this._cellBounds = [];
 
@@ -234,7 +230,7 @@ class BingoCard {
             const pool = [];
             for (let i = min; i <= max; i++) pool.push(i);
             shuffle(pool, true);
-            return pool.slice(0, count).sort((a, b) => a-b);
+            return pool.slice(0, count).sort((a, b) => a - b);
         };
 
         const card = {};
@@ -259,6 +255,10 @@ class BingoCard {
                 if (pointInRect(x, y, b)) {
                     const cell = this._card[letters[col]][row];
                     if (cell.value === 'FREE') return;
+                    if (sfx.toggle) {
+                        sfx.toggle.stop();
+                        sfx.toggle.play();
+                    }
                     cell.checked = !cell.checked;
                     this.save();
                     return;
