@@ -1,0 +1,56 @@
+{
+    "en-US": {
+        "loading_user_data": "Loading user data",
+        "save": "Save",
+        "import": "Import",
+        "export": "Export",
+        "continue": "Continue",
+        "yes": "Yes",
+        "no": "No"
+    },
+    "pl-PL": {
+        "loading_user_data": "Ładowanie danych użytkownika",
+        "save": "Zapisz",
+        "import": "Importuj",
+        "export": "Eksportuj",
+        "continue": "Kontynuuj",
+        "yes": "Tak",
+        "no": "Nie"
+    },
+    "de-DE": {
+        "loading_user_data": "Benutzerdaten werden geladen",
+        "save": "Speichern",
+        "import": "Importieren",
+        "export": "Exportieren",
+        "continue": "Fortsetzen",
+        "yes": "Ja",
+        "no": "Nein"
+    },
+    "es-ES": {
+        "loading_user_data": "Cargando datos del usuario",
+        "save": "Guardar",
+        "import": "Importar",
+        "export": "Exportar",
+        "continue": "Continuar",
+        "yes": "Sí",
+        "no": "No"
+    },
+    "fr-FR":{
+        "loading_user_data": "Chargement des données utilisateur",
+        "save": "Enregistrer",
+        "import": "Importer",
+        "export": "Exporter",
+        "continue": "Continuer",
+        "yes": "Oui",
+        "no": "Non"
+    },
+    "it-IT":{
+        "loading_user_data": "Caricamento dati utente",
+        "save": "Salva",
+        "import": "Importa",
+        "export": "Esporta",
+        "continue": "Continua",
+        "yes": "Sì",
+        "no": "No"
+    }
+}
