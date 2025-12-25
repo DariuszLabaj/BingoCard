@@ -156,9 +156,9 @@ class BingoCard {
     touchStarted(pos_x, pos_y) {
         if (this._scene != BingoCard.UserScene.READY) return;
         userStartAudio();
-        if (this._sfx?.toggle) {
-            sfx.stop();
-            sfx.play();
+        if (sfx.toggle) {
+            sfx.toggle.stop();
+            sfx.toggle.play();
         }
         if (pointInRect(pos_x, pos_y, this._ui.toggleTheme.bounds)) toggleTheme();
         if (pointInRect(pos_x, pos_y, this._ui.toggleFullscreen.bounds)) toggleFullscreen();
@@ -234,7 +234,7 @@ class BingoCard {
             const pool = [];
             for (let i = min; i <= max; i++) pool.push(i);
             shuffle(pool, true);
-            return pool.slice(0, count);
+            return pool.slice(0, count).sort((a, b) => a-b);
         };
 
         const card = {};
