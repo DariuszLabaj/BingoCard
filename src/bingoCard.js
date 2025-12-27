@@ -203,9 +203,18 @@ class BingoCard {
                 const cellData = this._card[letter][row];
 
                 fill(cellData.checked ? getCSSVariable('--primary') : getCSSVariable('--surface'));
-                rect(x, y, cell, cell, 8);
+                rect(x+4, y+4, cell-8, cell-8, 16);
                 fill(cellData.checked ? getCSSVariable('--on-primary') : getCSSVariable('--on-surface'));
-                text(cellData.value, x + cell / 2, y + cell / 2);
+                push();
+                noStroke();
+                if (cellData.value == 'FREE') {
+                    textSize(cell * 0.8);
+                    textFont(materialFont);
+                    text('kid_star', x + cell / 2, y + cell / 2 + cell*0.05);
+                } else {
+                    text(cellData.value, x + cell / 2, y + cell / 2 + cell*0.04);
+                }
+                pop();
 
                 this._cellBounds[col][row] = { x, y, w: cell, h: cell };
             }
